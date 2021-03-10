@@ -18,7 +18,7 @@ def to_index():
     os.system('rm -f index.html')
     with open("index.html", "a") as myfile:
         for i in pdf_to_jpg():
-            str = f"<a href=EDpatientinfoleaflet.pdf class=image fit><img src={i} alt=></a>\n"
+            str = f"<a href=EDpatientinfoleaflet.pdf class=image ><img src={i} alt=></a>\n"
             myfile.write(str)
 
 def create_qr_code():
