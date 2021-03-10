@@ -27,6 +27,9 @@ def create_qr_code():
 
 
 if __name__ == "__main__":
+    for image in os.listdir('.'):
+        if image.startswith('output'):
+            os.remove(image)
     to_index()
     os.system('git add .')
     os.system('git commit -m automated')
