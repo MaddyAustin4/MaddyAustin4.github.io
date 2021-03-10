@@ -20,7 +20,7 @@ def to_index():
     os.system('rm -f index.html')
     with open("index.html", "a") as myfile:
         for i in pdf_to_jpg():
-            str = f'<img src="{i}" width="145" height="126" alt="Planets"usemap="#planetmap">\n'
+            str = f'<img src="{i}" width="1000" height="1000" alt="Planets"usemap="#planetmap">\n'
             myfile.write(str)
 
 
