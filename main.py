@@ -27,6 +27,7 @@ def create_qr_code():
 
 if __name__ == "__main__":
     to_index()
-    os.system('git add index.html')
+    os.system('git add .')
     os.system('git commit -m automated')
     os.system('git push')
+    create_qr_code()
