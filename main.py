@@ -1,5 +1,6 @@
 from pdf2image import convert_from_path
 from PIL import Image
+import pyqrcode
 import os
 
 def pdf_to_jpg():
@@ -19,6 +20,13 @@ def to_index():
             str = f"<a href=EDpatientinfoleaflet.pdf class=image fit><img src={i} alt=></a>\n"
             myfile.write(str)
 
+def create_qr_code():
+    url = pyqrcode.create('https://maddyaustin4.github.io/')
+    url.png('./new.png')
+
 
 if __name__ == "__main__":
     to_index()
+    os.system('git add index.html')
+    os.system('git commit -m automated')
+    os.system('git push')
