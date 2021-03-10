@@ -20,7 +20,7 @@ def to_index():
     os.system('rm -f index.html')
     with open("index.html", "a") as myfile:
         for i in pdf_to_jpg():
-            str = f'<img src="{i}" width="1000" height="1000" alt="Planets"usemap="#planetmap">\n'
+            str = f"<a href=EDpatientinfoleaflet.pdf class=image ><img src={i} alt=></a>\n"
             myfile.write(str)
 
 
@@ -30,7 +30,6 @@ def create_qr_code():
 
 
 if __name__ == "__main__":
-    os.remove('new.png')
     for image in os.listdir('.'):
         if image.startswith('output'):
             os.remove(image)
